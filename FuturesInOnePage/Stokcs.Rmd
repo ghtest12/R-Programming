@@ -1,0 +1,827 @@
+```{r echo=TRUE, results='hide', message=FALSE}
+library(quantmod)
+getSymbols(c('ACC.NS','ADANIENT.NS','ADANIPORTS.NS','ADANIPOWER.NS','AJANTPHARM.NS','ALBK.NS','AMARAJABAT.NS','AMBUJACEM.NS','ANDHRABANK.NS','APOLLOHOSP.NS','APOLLOTYRE.NS','ARVIND.NS','ASHOKLEY.NS','ASIANPAINT.NS','AUROPHARMA.NS','AXISBANK.NS','BAJFINANCE.NS','BAJAJFINSV.NS','BALKRISIND.NS','BALRAMCHIN.NS','BANKBARODA.NS','BANKINDIA.NS','BATAINDIA.NS','BEML.NS','BERGEPAINT.NS','BEL.NS','BHARATFIN.NS','BHARATFORG.NS','BPCL.NS','BHARTIARTL.NS','INFRATEL.NS','BHEL.NS','BIOCON.NS','BOSCHLTD.NS','BRITANNIA.NS','CADILAHC.NS','CANFINHOME.NS','CANBK.NS','CAPF.NS','CASTROLIND.NS','CEATLTD.NS','CENTURYTEX.NS','CESC.NS','CGPOWER.NS','CHENNPETRO.NS','CHOLAFIN.NS','CIPLA.NS','COALINDIA.NS','COLPAL.NS','CONCOR.NS','CUMMINSIND.NS','DABUR.NS','DALMIABHA.NS','DCBBANK.NS','DHFL.NS','DISHTV.NS','DIVISLAB.NS','DLF.NS','DRREDDY.NS','EICHERMOT.NS','ENGINERSIN.NS','EQUITAS.NS','ESCORTS.NS','EXIDEIND.NS','FEDERALBNK.NS','GAIL.NS','GLENMARK.NS','GMRINFRA.NS','GODFRYPHLP.NS','GODREJCP.NS','GODREJIND.NS','GRANULES.NS','GRASIM.NS','GSFC.NS','HAVELLS.NS','HCLTECH.NS','HDFCBANK.NS','HDFC.NS','HEROMOTOCO.NS','HEXAWARE.NS','HINDALCO.NS','HCC.NS','HINDPETRO.NS','HINDUNILVR.NS','HINDZINC.NS','ICICIBANK.NS','ICICIPRULI.NS','IDBI.NS','IDEA.NS','IDFCBANK.NS','IDFC.NS','IFCI.NS','IBULHSGFIN.NS','INDIANB.NS','IOC.NS','IGL.NS','INDUSINDBK.NS','INFIBEAM.NS','INFY.NS','INDIGO.NS','IRB.NS','ITC.NS','JISLJALEQS.NS','JPASSOCIAT.NS','JETAIRWAYS.NS','JINDALSTEL.NS','JSWSTEEL.NS','JUBLFOOD.NS','JUSTDIAL.NS','KAJARIACER.NS','KTKBANK.NS','KSCL.NS','KOTAKBANK.NS','KPIT.NS','LT.NS','LICHSGFIN.NS','LUPIN.NS','MGL.NS','MANAPPURAM.NS','MRPL.NS','MARICO.NS','MARUTI.NS','MFSL.NS','MINDTREE.NS','MOTHERSUMI.NS','MRF.NS','MCX.NS','MUTHOOTFIN.NS','NATIONALUM.NS','NBCC.NS','NCC.NS','NESTLEIND.NS','NHPC.NS','NIITTECH.NS','NMDC.NS','NTPC.NS','ONGC.NS','OIL.NS','OFSS.NS','ORIENTBANK.NS','PAGEIND.NS','PCJEWELLER.NS','PETRONET.NS','PIDILITIND.NS','PEL.NS','PFC.NS','POWERGRID.NS','PTC.NS','PNB.NS','PVR.NS','RAYMOND.NS','RBLBANK.NS','RELCAPITAL.NS','RCOM.NS','RELIANCE.NS','RELINFRA.NS','RPOWER.NS','REPCOHOME.NS','RECLTD.NS','SHREECEM.NS','SRTRANSFIN.NS','SIEMENS.NS','SREINFRA.NS','SRF.NS','SBIN.NS','SAIL.NS','STAR.NS','SUNPHARMA.NS','SUNTV.NS','SUZLON.NS','SYNDIBANK.NS','TATACHEM.NS','TATACOMM.NS','TCS.NS','TATAELXSI.NS','TATAGLOBAL.NS','TATAMTRDVR.NS','TATAMOTORS.NS','TATAPOWER.NS','TATASTEEL.NS','TECHM.NS','INDIACEM.NS','RAMCOCEM.NS','SOUTHBANK.NS','TITAN.NS','TORNTPHARM.NS','TORNTPOWER.NS','TV18BRDCST.NS','TVSMOTOR.NS','UJJIVAN.NS','ULTRACEMCO.NS','UNIONBANK.NS','UBL.NS','UPL.NS','VEDL.NS','VGUARD.NS','VOLTAS.NS','WIPRO.NS','WOCKPHARMA.NS','YESBANK.NS','ZEEL.NS'), src='yahoo')
+```
+```{r}
+chartSeries(ACC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ADANIENT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ADANIPORTS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ADANIPOWER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(AJANTPHARM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ALBK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(AMARAJABAT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(AMBUJACEM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ANDHRABANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(APOLLOHOSP.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(APOLLOTYRE.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ARVIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ASHOKLEY.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ASIANPAINT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(AUROPHARMA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(AXISBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+#```{r}
+#chartSeries('BAJAJ-AUTO.NS', theme="white",
+#TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BAJFINANCE.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BAJAJFINSV.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BALKRISIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BALRAMCHIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BANKBARODA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BANKINDIA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BATAINDIA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BEML.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BERGEPAINT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BHARATFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BHARATFORG.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BPCL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BHARTIARTL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INFRATEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BHEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BIOCON.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BOSCHLTD.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(BRITANNIA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CADILAHC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CANFINHOME.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CANBK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CAPF.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CASTROLIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CEATLTD.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CENTURYTEX.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CESC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CGPOWER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CHENNPETRO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CHOLAFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CIPLA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(COALINDIA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(COLPAL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CONCOR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(CUMMINSIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DABUR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DALMIABHA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DCBBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DHFL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DISHTV.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DIVISLAB.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DLF.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(DRREDDY.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(EICHERMOT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ENGINERSIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(EQUITAS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ESCORTS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(EXIDEIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(FEDERALBNK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GAIL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GLENMARK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GMRINFRA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GODFRYPHLP.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GODREJCP.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GODREJIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GRANULES.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GRASIM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(GSFC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HAVELLS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HCLTECH.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HDFCBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HDFC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HEROMOTOCO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HEXAWARE.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HINDALCO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HCC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HINDPETRO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HINDUNILVR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(HINDZINC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ICICIBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ICICIPRULI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IDBI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IDEA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IDFCBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IDFC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IFCI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IBULHSGFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INDIANB.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IOC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IGL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INDUSINDBK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INFIBEAM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INFY.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INDIGO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(IRB.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ITC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JISLJALEQS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JPASSOCIAT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JETAIRWAYS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JINDALSTEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JSWSTEEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JUBLFOOD.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(JUSTDIAL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(KAJARIACER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(KTKBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(KSCL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(KOTAKBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(KPIT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+#```{r}
+#chartSeries(L&TFH.NS, theme="white",
+#TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(LT.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(LICHSGFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(LUPIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+#```{r}
+#chartSeries(M&MFIN.NS, theme="white",
+#TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MGL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+#```{r}
+#chartSeries(M&M.NS, theme="white",
+#TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MANAPPURAM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MRPL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MARICO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MARUTI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MFSL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MINDTREE.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MOTHERSUMI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MRF.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MCX.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(MUTHOOTFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NATIONALUM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NBCC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NCC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NESTLEIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NHPC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NIITTECH.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NMDC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(NTPC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ONGC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(OIL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(OFSS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ORIENTBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PAGEIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PCJEWELLER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PETRONET.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PIDILITIND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PFC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(POWERGRID.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PTC.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PNB.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(PVR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RAYMOND.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RBLBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RELCAPITAL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RCOM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RELIANCE.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RELINFRA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RPOWER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(REPCOHOME.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RECLTD.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SHREECEM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SRTRANSFIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SIEMENS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SREINFRA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SRF.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SBIN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SAIL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(STAR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SUNPHARMA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SUNTV.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SUZLON.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SYNDIBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATACHEM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATACOMM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TCS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATAELXSI.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATAGLOBAL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATAMTRDVR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATAMOTORS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATAPOWER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TATASTEEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TECHM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(INDIACEM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(RAMCOCEM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(SOUTHBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TITAN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TORNTPHARM.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TORNTPOWER.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TV18BRDCST.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(TVSMOTOR.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(UJJIVAN.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ULTRACEMCO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(UNIONBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(UBL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+#```{r}
+#chartSeries(MCDOWELL-N.NS, theme="white",
+#TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(UPL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(VEDL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(VGUARD.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(VOLTAS.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(WIPRO.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(WOCKPHARMA.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(YESBANK.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
+
+```{r}
+chartSeries(ZEEL.NS, theme="white",
+TA="addSMA(n=7);addSMA(n=25);addBBands();addCCI(n=100)", subset='2018-04::')
